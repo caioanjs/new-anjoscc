@@ -184,19 +184,19 @@ body {
 }
 
 .about-icon {
-  background-image: url('icons/Information.webp');
+  background-image: url('/icons/Information.webp');
 }
 
 .changelog-icon {
-  background-image: url('icons/Changelogs.webp');
+  background-image: url('/icons/Changelogs.webp');
 }
 
 .music-icon {
-  background-image: url('icons/Music.webp');
+  background-image: url('/icons/Music.webp');
 }
 
 .photos-icon {
-  background-image: url('icons/Images.webp');
+  background-image: url('/icons/Images.webp');
 }
 
 .socials-icon {
@@ -410,6 +410,118 @@ body {
   .changelog-window,
   .about-window {
     height: calc(100vh - 16px - 28px);
+  }
+}
+
+.webring-window {
+  width: 100%;
+  height: calc(100vh - 26px - 40px);
+}
+
+.webring-content {
+  padding: 20px;
+  color: #fff;
+}
+
+.code-block {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  position: relative;
+}
+
+.code-block pre {
+  margin: 0;
+  overflow-x: auto;
+}
+
+.code-block code {
+  color: #00ff66;
+  font-family: 'Consolas', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #333;
+  border: 1px solid #444;
+  color: #00ff66;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Consolas', monospace;
+  font-size: 12px;
+  transition: all 0.2s;
+}
+
+.copy-btn:hover {
+  background: #444;
+}
+
+.webring-preview {
+  margin-top: 30px;
+}
+
+.webring-preview h3 {
+  color: #00ff66;
+  margin-bottom: 15px;
+}
+
+.webring {
+  display: inline-block;
+}
+
+.webring img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.webring a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.webring a:hover {
+  opacity: 0.9;
+}
+
+.webring span {
+  color: #666;
+}
+
+/* Responsive styles for webring page */
+@media screen and (max-width: 768px) {
+  .code-block {
+    padding: 15px;
+  }
+  
+  .code-block code {
+    font-size: 12px;
+  }
+  
+  .copy-btn {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .webring-content {
+    padding: 15px;
+  }
+  
+  .code-block {
+    padding: 12px;
+  }
+  
+  .code-block code {
+    font-size: 11px;
   }
 }
 
