@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>webrings - anjos</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-title">
+      <a href="/" class="topbar-logo"></a>
+    </div>
+    <div class="clock" id="clock">12:00:00</div>
+  </div>
+  
+  <div class="desktop">
+    <div class="window webring-window">
+      <div class="window-header">
+        <div class="window-balls">
+          <span class="ball red"></span>
+          <span class="ball yellow"></span>
+          <span class="ball green"></span>
+        </div>
+        <div class="window-title">webrings.txt</div>
+      </div>
+      <div class="window-content">
+        <div class="webring-content">
+          <h2>my webring</h2>
+          <p>i would reccomend for you to put it from my website cuz i might change it:</p>
+          
+          <div class="code-block">
+            <pre><code>&lt;div class="webring"&gt;
+  &lt;a href="https://anjos.cc"&gt;
+    &lt;img src="https://anjos.cc/button/anjosa.png" alt="anjos webring"&gt;
+  &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+            <button class="copy-btn" onclick="copyCode()">copy</button>
+          </div>
+
+          <div class="webring-preview">
+            <h3>preview:</h3>
+            <div class="webring">
+              <a href="https://anjos.cc">
+                <img src="button/anjosa.png" alt="anjos webring">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function copyCode() {
+      const code = `<div class="webring">
+  <a href="https://anjos.cc">
+    <img src="https://anjos.cc/button/anjosa.png" alt="anjos webring">
+  </a>
+</div>`;
+      navigator.clipboard.writeText(code);
+      
+      const btn = document.querySelector('.copy-btn');
+      btn.textContent = 'copied!';
+      setTimeout(() => {
+        btn.textContent = 'copy';
+      }, 2000);
+    }
+  </script>
+</body>
+</html> 
