@@ -43,19 +43,22 @@ terminal.addEventListener('keydown', function(e) {
         const command = terminal.value.trim();
         terminal.value = ''; // Clear input immediately
         
-        // Format consistently with no extra spaces
-        if (output.textContent && !output.textContent.endsWith('\n')) {
-            output.textContent += '\n';
+        // Only process non-empty commands
+        if (command !== '') {
+            // Format consistently with no extra spaces
+            if (output.textContent && !output.textContent.endsWith('\n')) {
+                output.textContent += '\n';
+            }
+            
+            // Add command to output
+            output.textContent += `$ ${command}`;
+            
+            // Process command
+            processCommand(command);
+            
+            // Ensure scrolling happens after DOM updates
+            scrollTerminalToBottom();
         }
-        
-        // Add command to output
-        output.textContent += `$ ${command}`;
-        
-        // Process command
-        processCommand(command);
-        
-        // Ensure scrolling happens after DOM updates
-        scrollTerminalToBottom();
     }
 });
 
@@ -79,7 +82,6 @@ function processCommand(command) {
         output.textContent += `\n${new Date().toString()}`;
     } else if (cmd.startsWith('echo ')) {
         output.textContent += `\n${command.substring(5)}`;
-        
     } else if (cmd === 'ascii') {
         output.textContent += 
                           `
@@ -95,7 +97,7 @@ function processCommand(command) {
                      7&@@@@@&?.?@@@@@@&7   
                      7#@@@@B^   ^B@@@@#7   
                       .!5GJ.     .JGY~     `;
-    } else if (cmd !== '') {
+    } else {
         output.textContent += `\nCommand not found: ${command}`;
     }
 
