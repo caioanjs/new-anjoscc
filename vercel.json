@@ -4,7 +4,7 @@
     { "source": "/changelogs", "destination": "/changelogs.html" },
     { "source": "/music", "destination": "/music.html" },
     { "source": "/photos", "destination": "/photos.html" },
-    { "source": "/socials", "destination": "/socials.html" }
+    { "source": "/socials", "destination": "/socials.html" },
     { "source": "/webrings", "destination": "/webrings.html" }
   ]
 } 
