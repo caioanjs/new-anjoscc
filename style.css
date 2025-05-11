@@ -12,6 +12,7 @@ body {
   overflow: hidden;
   position: fixed;
   width: 100%;
+  overflow-x: hidden;
 }
 .topbar {
   position: fixed;
@@ -101,6 +102,8 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .terminal-content {
   flex: 1;
@@ -181,19 +184,19 @@ body {
 }
 
 .about-icon {
-  background-image: url('icons/Information.webp');
+  background-image: url('/icons/Information.webp');
 }
 
 .changelog-icon {
-  background-image: url('icons/Changelogs.webp');
+  background-image: url('/icons/Changelogs.webp');
 }
 
 .music-icon {
-  background-image: url('icons/Music.webp');
+  background-image: url('/icons/Music.webp');
 }
 
 .photos-icon {
-  background-image: url('icons/Images.webp');
+  background-image: url('/icons/Images.webp');
 }
 
 .socials-icon {
@@ -261,5 +264,152 @@ body {
 .skills-list li {
   margin-bottom: 5px;
   color: #00ff66;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+  .desktop {
+    flex-direction: column;
+  }
+  
+  .terminal-window {
+    max-width: none;
+    margin-right: 0;
+    margin-bottom: 13px;
+  }
+  
+  .explorer-window {
+    min-width: auto;
+  }
+  
+  .explorer-content {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .topbar {
+    padding: 0 13px;
+  }
+  
+  .topbar-title {
+    font-size: 20px;
+  }
+  
+  .window-header {
+    height: 32px;
+  }
+  
+  .window-title {
+    font-size: 14px;
+  }
+  
+  .app-btn {
+    min-width: 120px;
+    padding: 16px 12px;
+  }
+  
+  .app-icon {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .app-label {
+    font-size: 16px;
+  }
+  
+  .terminal-content {
+    font-size: 14px;
+    padding: 16px;
+  }
+  
+  #terminal-input {
+    font-size: 14px;
+  }
+  
+  .about-content h1 {
+    font-size: 24px;
+  }
+  
+  .about-section h2 {
+    font-size: 20px;
+  }
+  
+  .about-section p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .desktop {
+    padding: 40px 8px 8px 8px;
+  }
+  
+  .window {
+    border-radius: 12px;
+  }
+  
+  .app-btn {
+    min-width: 100px;
+    padding: 12px 8px;
+  }
+  
+  .app-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .app-label {
+    font-size: 14px;
+  }
+  
+  .explorer-content {
+    gap: 16px;
+  }
+  
+  .terminal-content {
+    padding: 12px;
+  }
+  
+  .window-header {
+    height: 28px;
+    padding: 0 12px;
+  }
+  
+  .ball {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .about-content h1 {
+    font-size: 20px;
+  }
+  
+  .about-section h2 {
+    font-size: 18px;
+  }
+  
+  .about-section p {
+    font-size: 14px;
+  }
+  
+  .skills-list li {
+    font-size: 14px;
+  }
+}
+
+/* Adjust window heights for mobile */
+@media screen and (max-width: 768px) {
+  .changelog-window,
+  .about-window {
+    height: calc(100vh - 26px - 32px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .changelog-window,
+  .about-window {
+    height: calc(100vh - 16px - 28px);
+  }
 }
 
