@@ -184,19 +184,19 @@ body {
 }
 
 .about-icon {
-  background-image: url('/icons/Information.webp');
+  background-image: url('icons/Information.webp');
 }
 
 .changelog-icon {
-  background-image: url('/icons/Changelogs.webp');
+  background-image: url('icons/Changelogs.webp');
 }
 
 .music-icon {
-  background-image: url('/icons/Music.webp');
+  background-image: url('icons/Music.webp');
 }
 
 .photos-icon {
-  background-image: url('/icons/Images.webp');
+  background-image: url('icons/Images.webp');
 }
 
 .socials-icon {
