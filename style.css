@@ -166,7 +166,7 @@ body {
   min-width: 150px;
 }
 .app-btn:hover {
-  background: rgba(60, 60, 60, 0.9);
+  background: rgba(60, 60, 60, 0.5);
 }
 .app-icon {
   width: 64px;
