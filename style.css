@@ -207,6 +207,10 @@ body {
   background-image: url('icons/Webrings.webp');
 }
 
+.suggestions-icon {
+  background-image: url('icons/Suggestions.webp');
+}
+
 .changelog-window {
   width: 100%;
   height: calc(100vh - 26px - 40px);
@@ -563,5 +567,137 @@ a {
 
 a:hover {
   color: #00b147;
+}
+
+/* Suggestions Page Styles */
+.suggestions-window {
+  width: 100%;
+  height: calc(100vh - 26px - 40px);
+}
+
+.suggestions-content {
+  padding: 20px;
+  color: #fff;
+}
+
+.suggestions-header {
+  margin-bottom: 30px;
+}
+
+.suggestions-header h1 {
+  font-size: 24px;
+  margin: 0 0 10px;
+  color: #00ff66;
+}
+
+.suggestions-subtitle {
+  color: #888;
+  margin: 0;
+}
+
+.suggestions-form {
+  max-width: 600px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #00ff66;
+  font-size: 16px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: #fff;
+  font-family: 'Consolas', monospace;
+  font-size: 16px;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #00ff66;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #666;
+}
+
+.submit-btn {
+  background: #00ff66;
+  color: #000;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-family: 'Consolas', monospace;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.submit-btn:hover {
+  opacity: 0.8;
+}
+
+/* Responsive styles for suggestions page */
+@media screen and (max-width: 768px) {
+  .suggestions-form {
+    max-width: 100%;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    font-size: 14px;
+    padding: 10px;
+  }
+  
+  .submit-btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+/* Thank You Page Styles */
+.thanks-window {
+  width: 100%;
+  height: calc(100vh - 26px - 40px);
+}
+
+.thanks-content {
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.thanks-content h1 {
+  font-size: 32px;
+  margin: 0 0 20px;
+  color: #00ff66;
+}
+
+.thanks-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+.thanks-content .submit-btn {
+  display: inline-block;
+  text-decoration: none;
 }
 
