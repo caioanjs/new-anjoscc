@@ -252,7 +252,8 @@ body {
 }
 
 .about-section p {
-  margin: 0;
+  margin: 10px 0;
+  line-height: 1.5;
 }
 
 .skills-list {
@@ -264,6 +265,35 @@ body {
 .skills-list li {
   margin-bottom: 5px;
   color: #00ff66;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.faq-item {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 16px;
+  transition: background 0.2s;
+  max-width: 600px;
+}
+
+.faq-item:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.faq-item h3 {
+  color: #00ff66;
+  margin: 0 0 8px 0;
+  font-size: 18px;
+}
+
+.faq-item p {
+  margin: 0;
+  color: #ccc;
 }
 
 /* Responsive Design */
@@ -523,5 +553,15 @@ body {
   .code-block code {
     font-size: 11px;
   }
+}
+
+a {
+  color: #00ff66;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #00b147;
 }
 
