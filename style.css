@@ -1,0 +1,265 @@
+@import url('https://fonts.cdnfonts.com/css/consolas');
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: url('wallpaper.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Consolas', monospace;
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 32px;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  z-index: 10;
+  font-size: 16px;
+}
+.topbar-title {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.topbar-logo {
+  width: 20px;
+  height: 35px;
+  background: url('logo.png') center/contain no-repeat;
+  display: block;
+  cursor: pointer;
+}
+.desktop {
+  display: flex;
+  gap: 13px;
+  padding: 45px 13px 13px 13px;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.window {
+  background: rgba(20, 20, 20, 0.85);
+  border-radius: 16px;
+  box-shadow: 0 4px 32px #000a;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.terminal-window {
+  flex: 1.2;
+  min-width: 400px;
+  max-width: 600px;
+  margin-right: 13px;
+  display: flex;
+  flex-direction: column;
+}
+.explorer-window {
+  flex: 2;
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+.window-header {
+  display: flex;
+  align-items: center;
+  height: 36px;
+  background: #222;
+  padding: 0 16px;
+  gap: 12px;
+}
+.window-balls {
+  display: flex;
+  gap: 6px;
+}
+.ball {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.ball.red { background: #ff5f56; }
+.ball.yellow { background: #ffbd2e; }
+.ball.green { background: #27c93f; }
+.window-title {
+  font-weight: bold;
+  font-size: 15px;
+  margin-left: 10px;
+}
+.window-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.terminal-content {
+  flex: 1;
+  background: transparent;
+  color: #00ff66;
+  font-size: 16px;
+  font-family: 'Consolas', monospace;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  height: 100%;
+  overflow-y: auto;
+  /* Removed overflow: hidden that was conflicting with overflow-y: auto */
+}
+#terminal-output {
+  flex: 1;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  margin-bottom: 16px;
+  /* Removed max-height and overflow-y to let parent container handle scrolling */
+}
+.terminal-input-line {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+.prompt {
+  color: #00ff66;
+  margin-right: 8px;
+}
+#terminal-input {
+  background: transparent;
+  border: none;
+  color: #00ff66;
+  font-family: inherit;
+  font-size: 16px;
+  outline: none;
+  width: 90%;
+}
+.explorer-content {
+  display: flex;
+  gap: 26px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 24px;
+  overflow-y: auto;
+}
+.app-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 12px;
+  padding: 24px 18px;
+  transition: background 0.2s;
+  min-width: 150px;
+}
+.app-btn:hover {
+  background: rgba(60, 60, 60, 0.9);
+}
+.app-icon {
+  width: 64px;
+  height: 64px;
+  background: url('app-icon.png') center/contain no-repeat;
+  margin-bottom: 12px;
+}
+.app-label {
+  font-size: 18px;
+  font-family: 'Consolas', monospace;
+  font-weight: bold;
+}
+.clock {
+  font-size: 14px;
+}
+
+.about-icon {
+  background-image: url('icons/Information.webp');
+}
+
+.changelog-icon {
+  background-image: url('icons/Changelogs.webp');
+}
+
+.music-icon {
+  background-image: url('icons/Music.webp');
+}
+
+.photos-icon {
+  background-image: url('icons/Images.webp');
+}
+
+.socials-icon {
+  background-image: url('icons/Socials.webp');
+}
+
+.webrings-icon {
+  background-image: url('icons/Webrings.webp');
+}
+
+.changelog-window {
+  width: 100%;
+  height: calc(100vh - 26px - 40px);
+}
+
+.changelog-content {
+  padding: 20px;
+}
+
+.about-window {
+  width: 100%;
+  height: calc(100vh - 26px - 40px);
+}
+
+.about-content {
+  padding: 20px;
+  color: #fff;
+}
+
+.about-header {
+  margin-bottom: 30px;
+}
+
+.about-header h1 {
+  font-size: 24px;
+  margin: 0 0 10px;
+  color: #00ff66;
+}
+
+.about-subtitle {
+  color: #888;
+  margin: 0;
+}
+
+.about-section {
+  margin-bottom: 20px;
+}
+
+.about-section h2 {
+  color: #00ff66;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.about-section p {
+  margin: 0;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-list li {
+  margin-bottom: 5px;
+  color: #00ff66;
+}
+
