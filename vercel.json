@@ -5,6 +5,6 @@
     { "source": "/music", "destination": "/music.html" },
     { "source": "/photos", "destination": "/photos.html" },
     { "source": "/socials", "destination": "/socials.html" },
-    { "source": "/projects", "destination": "/projects.html" },
+    { "source": "/projects", "destination": "/projects.html" }
   ]
 } 
