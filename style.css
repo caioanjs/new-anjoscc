@@ -211,6 +211,14 @@ body {
   background-image: url('icons/Suggestions.webp');
 }
 
+.projects-icon {
+  background-image: url('icons/Projects1.webp');
+}
+
+.projects-icon:hover {
+  background-image: url('icons/Projects.webp');
+}
+
 .changelog-window {
   width: 100%;
   height: calc(100vh - 26px - 40px);
