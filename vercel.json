@@ -6,6 +6,6 @@
     { "source": "/photos", "destination": "/photos.html" },
     { "source": "/socials", "destination": "/socials.html" },
     { "source": "/projects", "destination": "/projects.html" },
-    { "source": "/webrings", "destination": "/webrings.html" },
+    { "source": "/webrings", "destination": "/webrings.html" }
   ]
 } 
