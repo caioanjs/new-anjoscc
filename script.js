@@ -97,6 +97,10 @@ function processCommand(command) {
                      7&@@@@@&?.?@@@@@@&7   
                      7#@@@@B^   ^B@@@@#7   
                       .!5GJ.     .JGY~     `;
+
+    } else if (cmd === 'lixtrix') {
+        window.open('https://lixtrix.art', '_blank');
+        output.textContent += '\nOpening lixtrix.art in a new tab...';
     } else {
         output.textContent += `\nCommand not found: ${command}`;
     }
