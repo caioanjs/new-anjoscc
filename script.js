@@ -99,8 +99,14 @@ function processCommand(command) {
                       .!5GJ.     .JGY~     `;
 
     } else if (cmd === 'lixtrix') {
-        window.open('https://lixtrix.art', '_blank');
-        output.textContent += '\nOpening lixtrix.art in a new tab...';
+        console.log('Opening lixtrix.art...');
+        try {
+            window.open('http://lixtrix.art', '_blank');
+            output.textContent += '\nOpening lixtrix.art in a new tab...';
+        } catch (error) {
+            console.error('Error opening lixtrix.art:', error);
+            output.textContent += '\nError opening lixtrix.art. Please try again.';
+        }
     } else {
         output.textContent += `\nCommand not found: ${command}`;
     }
