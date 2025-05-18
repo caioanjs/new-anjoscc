@@ -1,3 +1,30 @@
+// Boot Animation
+document.addEventListener('DOMContentLoaded', () => {
+    const bootAnimation = document.querySelector('.boot-animation');
+    const progressBar = document.querySelector('.boot-progress-bar');
+    const bootLogo = document.querySelector('.boot-logo');
+    
+    // Set logo background
+    bootLogo.style.background = 'url("favicon.png") center/contain no-repeat';
+    
+    // Simulate boot sequence
+    let progress = 0;
+    const bootInterval = setInterval(() => {
+        progress += 2; // Increased increment for faster progress
+        progressBar.style.width = `${progress}%`;
+        
+        if (progress >= 100) {
+            clearInterval(bootInterval);
+            setTimeout(() => {
+                bootAnimation.classList.add('fade-out');
+                setTimeout(() => {
+                    bootAnimation.style.display = 'none';
+                }, 200); // Reduced fade-out delay
+            }, 200); // Reduced delay before fade-out
+        }
+    }, 15); // Reduced interval time
+});
+
 // Update clock function
 function updateClock() {
     const now = new Date();

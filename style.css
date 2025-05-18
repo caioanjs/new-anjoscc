@@ -770,3 +770,48 @@ a:hover {
   }
 }
 
+/* OS Boot Animation */
+.boot-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #00ff66;
+  font-family: 'Consolas', monospace;
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+}
+
+.boot-animation.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.boot-logo {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 30px;
+}
+
+.boot-progress {
+  width: 200px;
+  height: 4px;
+  background: rgba(0, 255, 102, 0.2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.boot-progress-bar {
+  width: 0%;
+  height: 100%;
+  background: #00ff66;
+  transition: width 0.5s ease-out;
+}
+
